@@ -7,13 +7,7 @@ form.addEventListener('change', save)
 
 function add() {
   const today = new Date().toLocaleDateString('pt-br').slice(0, -5)
-  const dayExists = nlwSetup.dayExists(today)
-  if (dayExists) {
-    alert('Dia já incluso');
-    return
-  }
-  alert('adicionado com sucesso')
-  nlwSetup.addDay(today)
+
 }
 function save() {
   localStorage.setItem('NLWsetup@habits', JSON.stringify(nlwSetup.data))
